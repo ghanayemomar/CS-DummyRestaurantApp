@@ -6,6 +6,11 @@
         public string Name { get; set; }
         public decimal Price { get; set; }
     }
-  
+    public class DrinkWithTotalPriceDTO
+    {
+        public decimal TotalPrice { get; set; }
+        public List<DrinkDTO> Drinks { get; set; }
+    }
+
 }
 

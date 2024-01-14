@@ -22,13 +22,19 @@ namespace RestuApi.Controllers
         }
         //
         [HttpGet]
-        public List<DrinkDTO> RetriveAllDrinks()
+        public IActionResult RetriveAllDrinks()
         {
-            return _drink.RetriveAllDrinks();
+            var result = _drink.RetriveAllDrinks();
+            var finalResult = new DrinkWithTotalPriceDTO()
+            {
+                Drinks = result,
+                TotalPrice = result.Select(d => d.Price).Sum(),
+            };
+            return Ok(finalResult);
         }
         //
         [HttpGet]
-        public ActionResult<DrinkDTO> RetriveDrinkById(int id)
+        public IActionResult RetriveDrinkById(int id)
         {
             var drink = _drink.RetriveDrinkById(id);
             if (drink == null)

@@ -36,9 +36,10 @@ namespace BusinessLogic.Services
         //
         public List<DrinkDTO> RetriveAllDrinks()
         {
-            var dinksDtos = _mapper.Map<List<DrinkDTO>>(drinks);
-            return dinksDtos;
+            var drinkDtos = _mapper.Map<List<DrinkDTO>>(drinks);
+            return drinkDtos;
         }
+
 
 
         public DrinkDTO RetriveDrinkById(int id)
