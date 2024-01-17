@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestuApi", "RestuApi\RestuApi.csproj", "{98FF6E5F-BACA-466E-93E5-28F41973C05A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataCenter", "DataCenter\DataCenter.csproj", "{B2FEAE27-8DFB-415E-BE62-B235896EBBF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{98FF6E5F-BACA-466E-93E5-28F41973C05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98FF6E5F-BACA-466E-93E5-28F41973C05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98FF6E5F-BACA-466E-93E5-28F41973C05A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2FEAE27-8DFB-415E-BE62-B235896EBBF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2FEAE27-8DFB-415E-BE62-B235896EBBF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2FEAE27-8DFB-415E-BE62-B235896EBBF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2FEAE27-8DFB-415E-BE62-B235896EBBF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

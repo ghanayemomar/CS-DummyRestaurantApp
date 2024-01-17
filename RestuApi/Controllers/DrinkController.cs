@@ -16,15 +16,15 @@ namespace RestuApi.Controllers
         }
         //
         [HttpPost]
-        public void CreateDrink([FromBody]CreateDrinkDTO drink)
+        public async Task CreateDrink([FromBody] CreateDrinkDTO drink)
         {
-            _drink.CreateDrink(drink);
+            _drink.CreateDrinkAsync(drink);
         }
         //
         [HttpGet]
-        public IActionResult RetriveAllDrinks()
+        public async Task<IActionResult> RetriveAllDrinks()
         {
-            var result = _drink.RetriveAllDrinks();
+            var result = await _drink.RetriveAllDrinksAsync();
             var finalResult = new DrinkWithTotalPriceDTO()
             {
                 Drinks = result,
@@ -34,20 +34,20 @@ namespace RestuApi.Controllers
         }
         //
         [HttpGet]
-        public IActionResult RetriveDrinkById(int id)
+        public async Task<IActionResult> RetriveDrinkById(int id)
         {
-            var drink = _drink.RetriveDrinkById(id);
+            var drink = await _drink.RetriveDrinkByIdAsync(id);
             if (drink == null)
             {
-                return NotFound(); 
+                return NotFound();
             }
             return Ok(drink);
         }
         //
         [HttpDelete]
-        public IActionResult DeleteDrink(int id)
+        public async Task<IActionResult> DeleteDrink(int id)
         {
-            var success = _drink.DeleteDrink(id);
+            var success = await _drink.DeleteDrinkAsync(id);
             if (success)
             {
                 return NoContent();
@@ -58,9 +58,9 @@ namespace RestuApi.Controllers
             }
         }
         [HttpPut]
-        public void UpdateDrink([FromBody] UpdateDrinkDTO drink)
+        public async Task UpdateDrink([FromBody] UpdateDrinkDTO drink)
         {
-            _drink.UpdateDrink(drink);
+            await _drink.UpdateDrinkAsync(drink);
         }
 
     }
